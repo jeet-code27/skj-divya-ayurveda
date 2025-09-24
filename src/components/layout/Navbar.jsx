@@ -58,8 +58,8 @@ export default function Navbar() {
                   <Image
                     src="/images/skj-navbar-logo.png"
                     alt="SKJ Divya Ayurveda Logo"
-                    width={60}
-                    height={60}
+                    width={70}
+                    height={70}
                     className="w-20 h-20 sm:w-20 sm:h-20 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24 object-contain"
                     priority
                   />
@@ -175,7 +175,7 @@ export default function Navbar() {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="lg:hidden bg-black/20 backdrop-blur-md rounded-lg mt-2 border border-white/20 mx-0 sm:mx-4">
+            <div className="lg:hidden bg-black/40 backdrop-blur-md rounded-lg mt-2 border border-white/20 mx-0 sm:mx-4">
               <div className="px-4 py-6 space-y-4">
                 <Link 
                   href="/" 
