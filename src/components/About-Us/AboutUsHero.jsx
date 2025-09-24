@@ -6,7 +6,7 @@ const AboutUsHero = ({
   backgroundImage = "/images/aboutus-banner.jpg",
   breadcrumbs = [
     { label: "HOME", href: "/" },
-    { label: "ABOUT US", href: "/about" }
+    { label: "ABOUT US", href: "/about-skj-divya-ayurveda-hospital-ajmer" }
   ],
   showBreadcrumbs = true,
   className = ""

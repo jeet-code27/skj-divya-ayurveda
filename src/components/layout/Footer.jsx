@@ -20,13 +20,13 @@ export default function Footer() {
               {/* Logo */}
               <div className="flex items-center space-x-3 mb-6">
                 {/* Logo Image with white background */}
-                <div className="relative p-2 bg-white rounded-full">
+                <div className="relative  bg-white rounded-full">
                   <Image
-                    src="/images/skjayurvedalogo.png"
+                    src="/images/skj-footer-logo.jpg"
                     alt="SKJ Divya Ayurveda Logo"
-                    width={40}
-                    height={40}
-                    className="w-18 h-18 object-contain"
+                    width={94}
+                    height={94}
+                    className="w-28 h-28 object-contain rounded-full"
                     priority
                   />
                 </div>
@@ -36,7 +36,7 @@ export default function Footer() {
                   className="text-2xl text-white font-light tracking-wide"
                   style={{fontFamily: 'Philosopher, serif'}}
                 >
-                  SKJ Ayurveda Hospital
+                  SKJ Divya Ayurveda Hospital
                 </span>
               </div>
 
@@ -48,18 +48,20 @@ export default function Footer() {
               {/* Social Icons */}
               <div className="flex space-x-4">
                 <Link 
-                  href="#" 
+                  href="http://facebook.com/p/SKJ-DIVYA-Ayurveda-Hospital-Panchkerma-Research-Center-100075817483243/" 
+                  target='_blank'
                   className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-300 hover:scale-110 transform"
                 >
                   <Facebook size={18} />
                 </Link>
                 <Link 
-                  href="#" 
+                  href="https://www.instagram.com/skj_divyaayurvedahospital/" 
+                    target='_blank'
                   className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-300 hover:scale-110 transform"
                 >
                   <Instagram size={18} />
                 </Link>
-                <Link 
+                {/* <Link 
                   href="#" 
                   className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-300 hover:scale-110 transform"
                 >
@@ -70,7 +72,7 @@ export default function Footer() {
                   className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-300 hover:scale-110 transform"
                 >
                   <Linkedin size={18} />
-                </Link>
+                </Link> */}
               </div>
             </div>
 

@@ -10,7 +10,7 @@ export default function HospitalGallery() {
   const galleryImages = [
     {
       id: 1,
-      src: "/images/panchkarma-therapy.png",
+      src: "/images/panchkarma-therapy5.png",
       alt: "Panchkarma Therapy",
       category: "Treatments",
       icon: Heart,
@@ -158,9 +158,9 @@ export default function HospitalGallery() {
                   <div className="absolute inset-0 flex flex-col justify-end p-6 z-10">
                     <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                       {/* Icon */}
-                      <div className="w-14 h-14 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-4 group-hover:bg-emerald-500/80 transition-all duration-300">
+                      {/* <div className="w-14 h-14 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-4 group-hover:bg-emerald-500/80 transition-all duration-300">
                         <IconComponent className="w-7 h-7 text-white" />
-                      </div>
+                      </div> */}
 
                       {/* Title */}
                       <h3 className="text-white text-lg font-bold mb-2 group-hover:text-emerald-100 transition-colors duration-300">
@@ -171,7 +171,7 @@ export default function HospitalGallery() {
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                         <button className="inline-flex items-center space-x-2 text-emerald-300 hover:text-white text-sm font-medium">
                           <Eye className="w-4 h-4" />
-                          <span>View Details</span>
+                          <span>View Image</span>
                         </button>
                       </div>
                     </div>

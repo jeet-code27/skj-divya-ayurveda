@@ -43,7 +43,7 @@ export default function SuDiviaHeroSection() {
                   Natural Healing Begins
                 </span>
                 <span className="block mt-1 sm:mt-0">
-                  Here at <span className="text-emerald-400">SKJ Divya Ayurveda</span> 
+                  Here at <span className="text-emerald-400">SKJ Divya Ayurveda Hospital</span> 
                 </span>
               </h1>
 

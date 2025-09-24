@@ -17,7 +17,7 @@ export default function AboutSection() {
                 {/* Top Left Image */}
                 <div className="rounded-2xl overflow-hidden shadow-lg relative h-64">
                   <Image 
-                    src="/images/ayurveda-hospital.png" 
+                    src="/images/hospital-skj-divya-ayurveda.jpg" 
                     alt="Ayurvedic hospital environment"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
@@ -28,7 +28,7 @@ export default function AboutSection() {
                 {/* Top Right Image */}
                 <div className="rounded-2xl overflow-hidden shadow-lg mt-8 relative h-64">
                   <Image 
-                    src="/images/panchkarma-therapy.png" 
+                    src="/images/doctor-with-patient.jpg" 
                     alt="Panchkarma therapy at SKJ Divya Ayurveda"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
@@ -39,7 +39,7 @@ export default function AboutSection() {
                 {/* Bottom Left Image */}
                 <div className="rounded-2xl overflow-hidden shadow-lg relative h-64">
                   <Image 
-                    src="/images/doctor-consulting.webp" 
+                    src="/images/doctor-cosulting-patient.jpg" 
                     alt="Ayurvedic doctor consultation"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
@@ -50,7 +50,7 @@ export default function AboutSection() {
                 {/* Bottom Right Image */}
                 <div className="rounded-2xl overflow-hidden shadow-lg relative h-64">
                   <Image 
-                    src="/images/hospital-interior.webp" 
+                    src="/images/hospital-reception.jpg" 
                     alt="Traditional Ayurvedic medicines"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"

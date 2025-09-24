@@ -20,7 +20,7 @@ export default function DirectorSection() {
             </h2>
             
             {/* Divider */}
-            <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-amber-400 mx-auto mb-8"></div>
+            {/* <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-amber-400 mx-auto mb-8"></div> */}
             
             {/* Mission Statement */}
             <p className="text-xl md:text-2xl text-emerald-700 font-semibold italic mb-12 max-w-4xl mx-auto">
@@ -41,9 +41,7 @@ export default function DirectorSection() {
                 />
               </div>
               
-              {/* Decorative Elements */}
-              <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-br from-emerald-400/20 to-amber-400/20 rounded-full blur-2xl"></div>
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-emerald-400/20 to-amber-400/20 rounded-full blur-2xl"></div>
+       
             </div>
 
             {/* Right Side - Content */}
