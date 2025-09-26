@@ -102,8 +102,8 @@ export default function Navbar() {
                       <Link href="/treatments/panchkarma" className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm">
                         Panchkarma Therapy
                       </Link>
-                      <Link href="/treatments/pain-management" className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm">
-                        Pain Management
+                      <Link   href="/treatments-at-skj-ayurveda-hospital/netra-tarpan" className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm">
+                        Netra Tarpan
                       </Link>
                       <Link href="/treatments/digestive-care" className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm">
                         Digestive Care
@@ -204,28 +204,28 @@ export default function Navbar() {
                   {isServicesOpen && (
                     <div className="mt-2 ml-4 space-y-2">
                       <Link 
-                        href="/treatments/panchkarma" 
+                        href="/treatments-at-skj-ayurveda-hospital/panchkarma" 
                         className="block text-white/80 hover:text-white transition-colors duration-200"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         Panchkarma
                       </Link>
                       <Link 
-                        href="/treatments/pain-management" 
+                        href="/treatments-at-skj-ayurveda-hospital/netra-tarpan" 
                         className="block text-white/80 hover:text-white transition-colors duration-200"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        Pain Management
+                        Netra Tarpan
                       </Link>
                       <Link 
-                        href="/treatments/digestive-care" 
+                        href="/treatments-at-skj-ayurveda-hospital/digestive-care" 
                         className="block text-white/80 hover:text-white transition-colors duration-200"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         Digestive Care
                       </Link>
                       <Link 
-                        href="/treatments/stress-relief" 
+                        href="/treatments-at-skj-ayurveda-hospital/stress-relief" 
                         className="block text-white/80 hover:text-white transition-colors duration-200"
                         onClick={() => setIsMenuOpen(false)}
                       >
