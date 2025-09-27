@@ -175,7 +175,7 @@ export default function Specialists() {
           {/* Bottom CTA */}
           <div className="text-center mt-16">
             <Link 
-              href="/consultation" 
+              href="/appointment" 
               className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-emerald-500/25"
             >
               Book Free Consultation

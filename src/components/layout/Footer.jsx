@@ -130,7 +130,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link 
-                    href="/services" 
+                    href="/treatments-at-skj-ayurveda-hospital" 
                     className="text-white/80 hover:text-white hover:text-emerald-300 transition-colors duration-200"
                   >
                     Services
@@ -146,7 +146,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link 
-                    href="/treatments" 
+                    href="/treatments-at-skj-ayurveda-hospital" 
                     className="text-white/80 hover:text-white hover:text-emerald-300 transition-colors duration-200"
                   >
                     Treatments
@@ -154,7 +154,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link 
-                    href="/contact" 
+                    href="/contact-at-skj-divya-ayurveda-hospital-ajmer" 
                     className="text-white/80 hover:text-white hover:text-emerald-300 transition-colors duration-200"
                   >
                     Contact
@@ -176,7 +176,7 @@ export default function Footer() {
               </h3>
               <p className="text-white/80 leading-relaxed">
                 SKJ Divya Ayurveda Hospital<br />
-                11, Aashirwad Gandhinagar, gali no 1, Makarwali Rd, opp. Dainik Bhaskar press,Ajmer, Rajasthan<br />
+                12 "Radha Dham", Chitrakoot Colony, Gali No. 2, Makadwali Road, Ajmer, Rajasthan<br />
                 305001, India
               </p>
             </div>
@@ -192,9 +192,17 @@ export default function Footer() {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <Phone size={16} className="text-emerald-400" />
-                  <span className="text-white/80">0145-4062302</span>
+                  <span className="text-white/80">0145-3580795</span>
                 </div>
                 <div className="flex items-center space-x-3">
+                  <Phone size={16} className="text-emerald-400" />
+                  <span className="text-white/80">9828014603</span>
+                </div>
+                 <div className="flex items-center space-x-3">
+                  <Phone size={16} className="text-emerald-400" />
+                  <span className="text-white/80">7665555863</span>
+                </div>
+                 <div className="flex items-center space-x-3">
                   <Phone size={16} className="text-emerald-400" />
                   <span className="text-white/80">9828034603</span>
                 </div>

@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Plus, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function FAQSection() {
   const [openAccordion, setOpenAccordion] = useState(0);
@@ -55,23 +56,39 @@ export default function FAQSection() {
             {/* Left Side - Header + Image */}
             <div className="flex flex-col">
               {/* Badge */}
-              <div className="inline-flex items-center space-x-2 bg-emerald-100 text-emerald-700 rounded-full px-4 py-2 mb-6 border border-emerald-200 self-start">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6 }}
+                className="inline-flex items-center space-x-2 bg-emerald-100 text-emerald-700 rounded-full px-4 py-2 mb-6 border border-emerald-200 self-start"
+              >
                 <Plus className="w-4 h-4" />
                 <span className="text-sm font-medium tracking-wide uppercase">
                   FAQs
                 </span>
-              </div>
+              </motion.div>
 
               {/* Main Heading */}
-              <h2 
+              <motion.h2 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-3xl md:text-4xl lg:text-5xl text-gray-800 leading-tight mb-8"
                 style={{fontFamily: 'Philosopher, serif'}}
               >
                 Frequently Asked Questions
-              </h2>
+              </motion.h2>
 
               {/* Image */}
-              <div className="relative flex-grow">
+              <motion.div 
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="relative flex-grow"
+              >
                 <div className="rounded-3xl overflow-hidden shadow-2xl h-full">
                   <Image
                     src="/images/sksharma.jpg"
@@ -83,7 +100,7 @@ export default function FAQSection() {
                     priority
                   />
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             {/* Right Side - FAQ Content */}
@@ -91,8 +108,12 @@ export default function FAQSection() {
               {/* FAQ Accordion */}
               <div className="space-y-1 flex-grow">
                 {faqs.map((faq, index) => (
-                  <div 
+                  <motion.div 
                     key={faq.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false }}
+                    transition={{ duration: 0.6, delay: 0.6 + (index * 0.1) }}
                     className="bg-white/60 backdrop-blur-sm rounded-2xl border border-emerald-100 overflow-hidden hover:bg-white/80 transition-all duration-300 hover:shadow-lg"
                   >
                     {/* Question Header */}
@@ -134,7 +155,7 @@ export default function FAQSection() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>

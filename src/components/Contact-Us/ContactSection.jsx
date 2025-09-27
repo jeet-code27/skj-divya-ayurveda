@@ -179,7 +179,7 @@ export default function ContactSection() {
                         </div>
                         <div className="text-left">
                           <p className="text-gray-800 font-semibold text-sm" style={{ fontFamily: 'Philosopher, serif' }}>
-                            11, Aashirwad Gandhinagar, gali no 1, Makarwali Rd, opp. Dainik Bhaskar press,   Ajmer, Rajasthan
+                            12 "Radha Dham", Chitrakoot Colony, Gali No. 2, Makadwali Road, Ajmer, Rajasthan
                           </p>
                           {/* <p className="text-gray-600 text-sm" style={{ fontFamily: 'Philosopher, serif' }}>
                             Ajmer, Rajasthan
@@ -193,7 +193,7 @@ export default function ContactSection() {
                         </div>
                         <div className="text-left">
                           <p className="text-gray-800 font-semibold text-sm" style={{ fontFamily: 'Philosopher, serif' }}>
-                            +0145-4062302, 9828034603
+                            +0145-3580795,9828014603
                           </p>
                         </div>
                       </div>

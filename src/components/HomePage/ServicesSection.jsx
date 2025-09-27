@@ -1,4 +1,7 @@
+'use client';
 import { Plus, Leaf, Heart, Shield, Activity } from 'lucide-react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function ServicesSection() {
   const services = [
@@ -45,32 +48,52 @@ export default function ServicesSection() {
           {/* Section Header */}
           <div className="text-center mb-16 max-w-3xl mx-auto">
             {/* Badge */}
-            <div className="inline-flex items-center space-x-2 bg-emerald-100 text-emerald-700 rounded-full px-4 py-2 mb-6 border border-emerald-200">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center space-x-2 bg-emerald-100 text-emerald-700 rounded-full px-4 py-2 mb-6 border border-emerald-200"
+            >
               <Plus className="w-4 h-4" />
               <span className="text-sm font-medium tracking-wide uppercase">
                 Our Services
               </span>
-            </div>
+            </motion.div>
 
             {/* Main Heading */}
-            <h2 
+            <motion.h2 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="text-3xl md:text-4xl lg:text-5xl text-gray-800 leading-tight mb-6"
               style={{fontFamily: 'Philosopher, serif'}}
             >
               Healing Services We Offer
-            </h2>
+            </motion.h2>
             
             {/* Description */}
-            <p className="text-gray-600 text-lg leading-relaxed">
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-gray-600 text-lg leading-relaxed"
+            >
               We provide a wide range of traditional Ayurvedic treatments to restore your health.
-            </p>
+            </motion.p>
           </div>
 
           {/* Services Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div 
+              <motion.div 
                 key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6, delay: 0.6 + (index * 0.1) }}
                 className="group bg-white rounded-2xl p-8 border border-emerald-100 hover:border-emerald-200 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden"
               >
                 {/* Background Gradient Effect */}
@@ -96,11 +119,17 @@ export default function ServicesSection() {
 
                 {/* Decorative Line */}
                 <div className="mt-6 w-12 h-1 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
+              </motion.div>
             ))}
             
             {/* Consultation Card - Extra card for balance */}
-            <div className="group bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl p-8 text-white shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6, delay: 1.1 }}
+              className="group bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl p-8 text-white shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
+            >
               <div className="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Plus className="w-8 h-8" />
               </div>
@@ -116,21 +145,27 @@ export default function ServicesSection() {
                 Book a complimentary consultation with our Ayurvedic experts to discuss your health concerns.
               </p>
 
-              <button className="mt-6 bg-white text-emerald-700 px-6 py-2 rounded-full font-medium hover:bg-emerald-50 transition-colors duration-300">
+              <Link  href='/appointment' className="mt-6 bg-white text-emerald-700 px-6 py-2 rounded-full font-medium hover:bg-emerald-50 transition-colors duration-300">
                 Schedule Now
-              </button>
-            </div>
+              </Link>
+            </motion.div>
           </div>
 
           {/* Bottom CTA */}
-          <div className="text-center mt-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+            className="text-center mt-16"
+          >
             <p className="text-gray-600 mb-8">
               Can't find what you're looking for? Contact us for more information about our treatments.
             </p>
             <button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-emerald-500/25">
               Contact Us
             </button>
-          </div>
+          </motion.div>
         </div>
       </section>
     </>

@@ -1,4 +1,6 @@
+'use client';
 import { Quote } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function LeadershipSection() {
   return (
@@ -21,20 +23,36 @@ export default function LeadershipSection() {
         {/* Content */}
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Section Title */}
-          <h2 
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8 }}
             className="text-3xl md:text-4xl lg:text-5xl text-white mb-12"
             style={{fontFamily: 'Philosopher, serif'}}
           >
             Meet Our Expert Ayurvedic Team
-          </h2>
+          </motion.h2>
           
-          <p className="text-white/90 text-lg md:text-xl mb-16 max-w-3xl mx-auto">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-white/90 text-lg md:text-xl mb-16 max-w-3xl mx-auto"
+          >
             Our strength lies in our dedicated team of doctors who are committed to your well-being.
-          </p>
+          </motion.p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Dr. S.K. Sharma */}
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20"
+            >
               <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-white/30">
                 <img 
                   src="/images/drsksharma.jpg" 
@@ -47,10 +65,16 @@ export default function LeadershipSection() {
               <p className="text-white/80 text-sm">
                 A visionary leader with years of experience in Ayurveda, guiding the hospital's mission to provide genuine care.
               </p>
-            </div>
+            </motion.div>
 
             {/* Dr. Dharmendra Jakhar */}
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20"
+            >
               <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-white/30">
                 <img 
                   src="/images/doctor.png" 
@@ -63,10 +87,16 @@ export default function LeadershipSection() {
               <p className="text-white/80 text-sm">
                 Registered Ayurvedic physician specializing in Panchkarma and pain management.
               </p>
-            </div>
+            </motion.div>
 
             {/* Dr. Reena Saini */}
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20"
+            >
               <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-white/30">
                 <img 
                   src="/images/doctor.png" 
@@ -79,10 +109,16 @@ export default function LeadershipSection() {
               <p className="text-white/80 text-sm">
                 Registered Ayurvedic physician with expertise in women's wellness and rejuvenation therapies.
               </p>
-            </div>
+            </motion.div>
 
             {/* Dr. Aaesha Aslam Chohan */}
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20"
+            >
               <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-white/30">
                 <img 
                   src="/images/doctor.png" 
@@ -95,11 +131,17 @@ export default function LeadershipSection() {
               <p className="text-white/80 text-sm">
                 Registered Ayurvedic physician focused on holistic treatments and patient care.
               </p>
-            </div>
+            </motion.div>
           </div>
 
           {/* Quote at Bottom */}
-          <div className="mt-16 pt-8 border-t border-white/20">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="mt-16 pt-8 border-t border-white/20"
+          >
             <div className="flex justify-center mb-6">
               <Quote className="w-12 h-12 text-emerald-300 transform rotate-180" fill="currentColor" />
             </div>
@@ -110,7 +152,7 @@ export default function LeadershipSection() {
               At SKJ Divya Ayurveda Hospital, we're dedicated to providing authentic Ayurvedic care 
               that treats the root cause of illness for lasting health and wellness.
             </blockquote>
-          </div>
+          </motion.div>
         </div>
       </section>
     </>

@@ -92,7 +92,7 @@ export default function NetraTarpanPage() {
                 </Link>
                 
                 <Link 
-                  href="/contact" 
+                  href="/contact-at-skj-divya-ayurveda-hospital-ajmer" 
                   className="inline-flex items-center justify-center border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50 px-8 py-3 rounded-full font-medium transition-all duration-200"
                 >
                   <MapPin className="w-4 h-4 mr-2" />
@@ -429,11 +429,11 @@ export default function NetraTarpanPage() {
               className="inline-flex items-center justify-center bg-white text-emerald-600 px-8 py-3 rounded-full font-medium hover:bg-gray-50 transition-all duration-200 transform hover:scale-105 shadow-lg"
             >
               <Phone className="w-4 h-4 mr-2" />
-              अभी कॉल करें: +91 98765 43210
+              अभी कॉल करें: +91 9828034603
             </Link>
             
             <Link 
-              href="/treatments" 
+              href="/treatments-at-skj-ayurveda-hospital" 
               className="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-emerald-600 px-8 py-3 rounded-full font-medium transition-all duration-200"
             >
               अन्य उपचार देखें

@@ -4,7 +4,10 @@ import NetraTarpanPage from "@/components/Treatments/NetraTarpanPage";
 export default function NetraTarpan() {
   return (
    <>
-  <AboutUsHero/>
+  <AboutUsHero
+        title={"Netra Tarpan"}
+        breadcrumbs={[{ label: "HOME", href: "/" }]}
+      />
   <NetraTarpanPage/>
    </>
   );

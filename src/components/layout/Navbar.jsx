@@ -1,8 +1,18 @@
-'use client';
-import Link from 'next/link';
-import Image from 'next/image';
-import { useState } from 'react';
-import { ChevronDown, Menu, X, Facebook, Instagram, Youtube, Linkedin, Mail, Phone } from 'lucide-react';
+"use client";
+import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
+import {
+  ChevronDown,
+  Menu,
+  X,
+  Facebook,
+  Instagram,
+  Youtube,
+  Linkedin,
+  Mail,
+  Phone,
+} from "lucide-react";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,18 +27,18 @@ export default function Navbar() {
           <div className="flex justify-between items-center py-2">
             {/* Social Icons */}
             <div className="flex items-center space-x-3">
-              <Link href="http://facebook.com/p/SKJ-DIVYA-Ayurveda-Hospital-Panchkerma-Research-Center-100075817483243/" className="text-white/80 hover:text-white transition-colors duration-200 p-2 rounded-full bg-white/10 hover:bg-white/20">
+              <Link
+                href="http://facebook.com/p/SKJ-DIVYA-Ayurveda-Hospital-Panchkerma-Research-Center-100075817483243/"
+                className="text-white/80 hover:text-white transition-colors duration-200 p-2 rounded-full bg-white/10 hover:bg-white/20"
+              >
                 <Facebook size={16} />
               </Link>
-              <Link href="https://www.instagram.com/skj_divyaayurvedahospital/" className="text-white/80 hover:text-white transition-colors duration-200 p-2 rounded-full bg-white/10 hover:bg-white/20">
+              <Link
+                href="https://www.instagram.com/skj_divyaayurvedahospital/"
+                className="text-white/80 hover:text-white transition-colors duration-200 p-2 rounded-full bg-white/10 hover:bg-white/20"
+              >
                 <Instagram size={16} />
               </Link>
-              {/* <Link href="#" className="text-white/80 hover:text-white transition-colors duration-200 p-2 rounded-full bg-white/10 hover:bg-white/20">
-                <Youtube size={16} />
-              </Link>
-              <Link href="#" className="text-white/80 hover:text-white transition-colors duration-200 p-2 rounded-full bg-white/10 hover:bg-white/20">
-                <Linkedin size={16} />
-              </Link> */}
             </div>
 
             {/* Contact Info */}
@@ -39,7 +49,7 @@ export default function Navbar() {
               </div>
               <div className="flex items-center space-x-2">
                 <Phone size={14} />
-                <span>0145-4062302</span>
+                <span>0145-3580795</span>
               </div>
             </div>
           </div>
@@ -52,7 +62,10 @@ export default function Navbar() {
           <div className="flex justify-between items-center py-3 sm:py-4 lg:py-6">
             {/* Logo Section */}
             <div className="flex-shrink-0 flex items-center">
-              <Link href="/" className="flex items-center space-x-2 sm:space-x-3">
+              <Link
+                href="/"
+                className="flex items-center space-x-2 sm:space-x-3"
+              >
                 {/* Logo Image Container */}
                 <div className="relative flex-shrink-0">
                   <Image
@@ -64,12 +77,12 @@ export default function Navbar() {
                     priority
                   />
                 </div>
-                
+
                 {/* Brand Text */}
                 <div className="hidden xs:block">
-                  <span 
-                    className="text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-light tracking-wide leading-tight" 
-                    style={{fontFamily: 'Philosopher, serif'}}
+                  <span
+                    className="text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-light tracking-wide leading-tight"
+                    style={{ fontFamily: "Philosopher, serif" }}
                   >
                     <span className="block sm:inline">SKJ Divya</span>
                     <span className="block sm:inline sm:ml-1">Ayurveda</span>
@@ -80,68 +93,168 @@ export default function Navbar() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-              <Link href="/" className="text-white/90 hover:text-white transition-colors duration-200 font-medium text-sm xl:text-base">
+              <Link
+                href="/"
+                className="text-white/90 hover:text-white transition-colors duration-200 font-medium text-sm xl:text-base"
+              >
                 Home
               </Link>
-              <Link href="/about-skj-divya-ayurveda-hospital-ajmer" className="text-white/90 hover:text-white transition-colors duration-200 font-medium text-sm xl:text-base">
+              <Link
+                href="/about-skj-divya-ayurveda-hospital-ajmer"
+                className="text-white/90 hover:text-white transition-colors duration-200 font-medium text-sm xl:text-base"
+              >
                 About Us
               </Link>
-              
+
               {/* Treatments Dropdown */}
               <div className="relative">
-                <button 
+                <button
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
                   className="flex items-center space-x-1 text-white/90 hover:text-white transition-colors duration-200 font-medium text-sm xl:text-base"
                 >
                   <span>Treatments</span>
-                  <ChevronDown size={16} className={`transform transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown
+                    size={16}
+                    className={`transform transition-transform duration-200 ${
+                      isServicesOpen ? "rotate-180" : ""
+                    }`}
+                  />
                 </button>
                 {isServicesOpen && (
                   <div className="absolute top-full left-0 mt-2 w-56 bg-white/10 backdrop-blur-md rounded-lg shadow-lg border border-white/20">
                     <div className="py-2">
-                      <Link href="/treatments/panchkarma" className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm">
-                        Panchkarma Therapy
-                      </Link>
-                      <Link   href="/treatments-at-skj-ayurveda-hospital/netra-tarpan" className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm">
+                      <Link
+                        href="/treatments-at-skj-ayurveda-hospital/netra-tarpan"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
                         Netra Tarpan
                       </Link>
-                      <Link href="/treatments/digestive-care" className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm">
-                        Digestive Care
+                      <Link
+                        href="/treatments-at-skj-ayurveda-hospital/greeva-basti"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+                        Greeva Basti
                       </Link>
-                      <Link href="/treatments/stress-relief" className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm">
-                        Stress Relief
+                      <Link
+                        href="/treatments-at-skj-ayurveda-hospital/shirodhara"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+                        Shirodhara
+                      </Link>
+                      <Link
+                        href="/treatments-at-skj-ayurveda-hospital/snehdhara"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+                        Snehdhara
+                      </Link>
+                      <Link
+                        href="/treatments-at-skj-ayurveda-hospital/rakta-mokshana"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+                        Rakta Mokshana
+                      </Link>
+                      <Link
+                        href="/treatments-at-skj-ayurveda-hospital/panch-karma"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+                        Panch Karma
+                      </Link>
+                      <Link
+                        href="/treatments-at-skj-ayurveda-hospital/kati-basti"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+                        Kati Basti
+                      </Link>
+                      <Link
+                        href="/treatments-at-skj-ayurveda-hospital/karna-purana"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+                        Karna Purana
+                      </Link>
+                      <Link
+                        href="/treatments-at-skj-ayurveda-hospital/janu-basti"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+                        Janu Basti
+                      </Link>
+                      <Link
+                        href="/treatments-at-skj-ayurveda-hospital/hridaya-basti"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+                        Hridaya-Basti
+                      </Link>
+                      <Link
+                        href="/treatments-at-skj-ayurveda-hospital/nasya-therapy"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+                        Nasya Therapy
                       </Link>
                     </div>
                   </div>
                 )}
               </div>
 
-              <Link href="/doctors" className="text-white/90 hover:text-white transition-colors duration-200 font-medium text-sm xl:text-base">
+              <Link
+                href="/doctors"
+                className="text-white/90 hover:text-white transition-colors duration-200 font-medium text-sm xl:text-base"
+              >
                 Our Doctors
               </Link>
 
               {/* Patient Care Dropdown */}
               <div className="relative">
-                <button 
+                <button
                   onClick={() => setIsPagesOpen(!isPagesOpen)}
                   className="flex items-center space-x-1 text-white/90 hover:text-white transition-colors duration-200 font-medium text-sm xl:text-base"
                 >
                   <span>Patient Care</span>
-                  <ChevronDown size={16} className={`transform transition-transform duration-200 ${isPagesOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown
+                    size={16}
+                    className={`transform transition-transform duration-200 ${
+                      isPagesOpen ? "rotate-180" : ""
+                    }`}
+                  />
                 </button>
                 {isPagesOpen && (
                   <div className="absolute top-full left-0 mt-2 w-48 bg-white/10 backdrop-blur-md rounded-lg shadow-lg border border-white/20">
                     <div className="py-2">
-                      <Link href="/testimonials" className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm">
+                      <Link
+                        href="/testimonials"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsPagesOpen(!isPagesOpen)}
+                      >
                         Testimonials
                       </Link>
-                      <Link href="/gallery" className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm">
+                      <Link
+                        href="/gallery"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsPagesOpen(!isPagesOpen)}
+                      >
                         Gallery
                       </Link>
-                      <Link href="/faq" className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm">
+                      <Link
+                        href="/faq"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsPagesOpen(!isPagesOpen)}
+                      >
                         FAQ
                       </Link>
-                      <Link href="/blog" className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm">
+                      <Link
+                        href="/blog"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsPagesOpen(!isPagesOpen)}
+                      >
                         Health Blog
                       </Link>
                     </div>
@@ -149,15 +262,18 @@ export default function Navbar() {
                 )}
               </div>
 
-              <Link href="/contact-at-skj-divya-ayurveda-hospital-ajmer" className="text-white/90 hover:text-white transition-colors duration-200 font-medium text-sm xl:text-base">
+              <Link
+                href="/contact-at-skj-divya-ayurveda-hospital-ajmer"
+                className="text-white/90 hover:text-white transition-colors duration-200 font-medium text-sm xl:text-base"
+              >
                 Contact
               </Link>
             </nav>
 
             {/* CTA Button - Hidden on tablet, shown on desktop */}
             <div className="hidden xl:flex items-center">
-              <Link 
-                href="/appointment" 
+              <Link
+                href="/appointment"
                 className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-4 py-2 lg:px-6 lg:py-2 rounded-full font-medium transition-all duration-200 transform hover:scale-105 shadow-lg text-sm"
               >
                 Book Consultation
@@ -177,66 +293,120 @@ export default function Navbar() {
           {isMenuOpen && (
             <div className="lg:hidden bg-black/40 backdrop-blur-md rounded-lg mt-2 border border-white/20 mx-0 sm:mx-4">
               <div className="px-4 py-6 space-y-4">
-                <Link 
-                  href="/" 
+                <Link
+                  href="/"
                   className="block text-white/90 hover:text-white transition-colors duration-200 font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Home
                 </Link>
-                <Link 
-                  href="/about-skj-divya-ayurveda-hospital-ajmer" 
+                <Link
+                  href="/about-skj-divya-ayurveda-hospital-ajmer"
                   className="block text-white/90 hover:text-white transition-colors duration-200 font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   About Us
                 </Link>
-                
+
                 {/* Mobile Treatments */}
                 <div>
-                  <button 
+                  <button
                     onClick={() => setIsServicesOpen(!isServicesOpen)}
                     className="flex items-center justify-between w-full text-white/90 hover:text-white transition-colors duration-200 font-medium"
                   >
                     <span>Treatments</span>
-                    <ChevronDown size={16} className={`transform transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
+                    <ChevronDown
+                      size={16}
+                      className={`transform transition-transform duration-200 ${
+                        isServicesOpen ? "rotate-180" : ""
+                      }`}
+                    />
                   </button>
                   {isServicesOpen && (
                     <div className="mt-2 ml-4 space-y-2">
-                      <Link 
-                        href="/treatments-at-skj-ayurveda-hospital/panchkarma" 
-                        className="block text-white/80 hover:text-white transition-colors duration-200"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        Panchkarma
-                      </Link>
-                      <Link 
-                        href="/treatments-at-skj-ayurveda-hospital/netra-tarpan" 
-                        className="block text-white/80 hover:text-white transition-colors duration-200"
+                      <Link
+                        href="/treatments-at-skj-ayurveda-hospital/netra-tarpan"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         Netra Tarpan
                       </Link>
-                      <Link 
-                        href="/treatments-at-skj-ayurveda-hospital/digestive-care" 
-                        className="block text-white/80 hover:text-white transition-colors duration-200"
+                      <Link
+                        href="/treatments-at-skj-ayurveda-hospital/greeva-basti"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        Digestive Care
+                        Greeva Basti
                       </Link>
-                      <Link 
-                        href="/treatments-at-skj-ayurveda-hospital/stress-relief" 
-                        className="block text-white/80 hover:text-white transition-colors duration-200"
+                      <Link
+                        href="/treatments-at-skj-ayurveda-hospital/shirodhara"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        Stress Relief
+                        Shirodhara
+                      </Link>
+                      <Link
+                        href="/treatments-at-skj-ayurveda-hospital/snehdhara"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Snehdhara
+                      </Link>
+                      <Link
+                        href="/treatments-at-skj-ayurveda-hospital/rakta-mokshana"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Rakta Mokshana
+                      </Link>
+                      <Link
+                        href="/treatments-at-skj-ayurveda-hospital/panch-karma"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Panch Karma
+                      </Link>
+                      <Link
+                        href="/treatments-at-skj-ayurveda-hospital/kati-basti"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Kati Basti
+                      </Link>
+                      <Link
+                        href="/treatments-at-skj-ayurveda-hospital/karna-purana"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Karna Purana
+                      </Link>
+                      <Link
+                        href="/treatments-at-skj-ayurveda-hospital/janu-basti"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Janu Basti
+                      </Link>
+                      <Link
+                        href="/treatments-at-skj-ayurveda-hospital/hridaya-basti"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Hridaya-Basti
+                      </Link>
+                      <Link
+                        href="/treatments-at-skj-ayurveda-hospital/nasya-therapy"
+                        className="block px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 text-sm"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Nasya Therapy
                       </Link>
                     </div>
                   )}
                 </div>
 
-                <Link 
-                  href="/doctors" 
+                <Link
+                  href="/doctors"
                   className="block text-white/90 hover:text-white transition-colors duration-200 font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -245,38 +415,43 @@ export default function Navbar() {
 
                 {/* Mobile Patient Care */}
                 <div>
-                  <button 
+                  <button
                     onClick={() => setIsPagesOpen(!isPagesOpen)}
                     className="flex items-center justify-between w-full text-white/90 hover:text-white transition-colors duration-200 font-medium"
                   >
                     <span>Patient Care</span>
-                    <ChevronDown size={16} className={`transform transition-transform duration-200 ${isPagesOpen ? 'rotate-180' : ''}`} />
+                    <ChevronDown
+                      size={16}
+                      className={`transform transition-transform duration-200 ${
+                        isPagesOpen ? "rotate-180" : ""
+                      }`}
+                    />
                   </button>
                   {isPagesOpen && (
                     <div className="mt-2 ml-4 space-y-2">
-                      <Link 
-                        href="/testimonials" 
+                      <Link
+                        href="/testimonials"
                         className="block text-white/80 hover:text-white transition-colors duration-200"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         Testimonials
                       </Link>
-                      <Link 
-                        href="/gallery" 
+                      <Link
+                        href="/gallery"
                         className="block text-white/80 hover:text-white transition-colors duration-200"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         Gallery
                       </Link>
-                      <Link 
-                        href="/faq" 
+                      <Link
+                        href="/faq"
                         className="block text-white/80 hover:text-white transition-colors duration-200"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         FAQ
                       </Link>
-                      <Link 
-                        href="/blog" 
+                      <Link
+                        href="/blog"
                         className="block text-white/80 hover:text-white transition-colors duration-200"
                         onClick={() => setIsMenuOpen(false)}
                       >
@@ -286,8 +461,8 @@ export default function Navbar() {
                   )}
                 </div>
 
-                <Link 
-                  href="/contact-at-skj-divya-ayurveda-hospital-ajmer" 
+                <Link
+                  href="/contact-at-skj-divya-ayurveda-hospital-ajmer"
                   className="block text-white/90 hover:text-white transition-colors duration-200 font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -295,8 +470,8 @@ export default function Navbar() {
                 </Link>
 
                 {/* Mobile CTA */}
-                <Link 
-                  href="/appointment" 
+                <Link
+                  href="/appointment"
                   className="block w-full text-center bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-3 rounded-full font-medium transition-all duration-200 mt-6"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -308,8 +483,8 @@ export default function Navbar() {
                   <div className="flex items-start space-x-2 text-white/80 text-sm">
                     <Phone size={16} className="mt-0.5 flex-shrink-0" />
                     <div>
-                      <div>0145-4062302</div>
-                      <div>9828034603</div>
+                      <div>0145-3580795</div>
+                      <div>9828014603</div>
                     </div>
                   </div>
                   <div className="flex items-start space-x-2 text-white/80 text-sm">
@@ -320,18 +495,30 @@ export default function Navbar() {
 
                 {/* Mobile Social Icons */}
                 <div className="flex justify-center space-x-4 pt-4">
-                  <Link href="#" className="text-white/80 hover:text-white transition-colors duration-200 p-2 rounded-full bg-white/10 hover:bg-white/20">
+                  <Link
+                    href="https://www.facebook.com/p/SKJ-DIVYA-Ayurveda-Hospital-Panchkerma-Research-Center-100075817483243/"
+                    className="text-white/80 hover:text-white transition-colors duration-200 p-2 rounded-full bg-white/10 hover:bg-white/20"
+                  >
                     <Facebook size={18} />
                   </Link>
-                  <Link href="#" className="text-white/80 hover:text-white transition-colors duration-200 p-2 rounded-full bg-white/10 hover:bg-white/20">
+                  <Link
+                    href="https://www.instagram.com/skj_divyaayurvedahospital/"
+                    className="text-white/80 hover:text-white transition-colors duration-200 p-2 rounded-full bg-white/10 hover:bg-white/20"
+                  >
                     <Instagram size={18} />
                   </Link>
-                  <Link href="#" className="text-white/80 hover:text-white transition-colors duration-200 p-2 rounded-full bg-white/10 hover:bg-white/20">
+                  {/* <Link
+                    href="#"
+                    className="text-white/80 hover:text-white transition-colors duration-200 p-2 rounded-full bg-white/10 hover:bg-white/20"
+                  >
                     <Youtube size={18} />
                   </Link>
-                  <Link href="#" className="text-white/80 hover:text-white transition-colors duration-200 p-2 rounded-full bg-white/10 hover:bg-white/20">
+                  <Link
+                    href="#"
+                    className="text-white/80 hover:text-white transition-colors duration-200 p-2 rounded-full bg-white/10 hover:bg-white/20"
+                  >
                     <Linkedin size={18} />
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>

@@ -1,5 +1,7 @@
+'use client';
 import { Plus, Check } from 'lucide-react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function AboutSection() {
   return (
@@ -12,10 +14,22 @@ export default function AboutSection() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             
             {/* Left Side - Image Grid */}
-            <div className="relative">
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
               <div className="grid grid-cols-2 gap-4">
                 {/* Top Left Image */}
-                <div className="rounded-2xl overflow-hidden shadow-lg relative h-64">
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: false }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="rounded-2xl overflow-hidden shadow-lg relative h-64"
+                >
                   <Image 
                     src="/images/hospital-skj-divya-ayurveda.jpg" 
                     alt="Ayurvedic hospital environment"
@@ -23,10 +37,16 @@ export default function AboutSection() {
                     className="object-cover hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 20vw"
                   />
-                </div>
+                </motion.div>
 
                 {/* Top Right Image */}
-                <div className="rounded-2xl overflow-hidden shadow-lg mt-8 relative h-64">
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: false }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  className="rounded-2xl overflow-hidden shadow-lg mt-8 relative h-64"
+                >
                   <Image 
                     src="/images/doctor-with-patient.jpg" 
                     alt="Panchkarma therapy at SKJ Divya Ayurveda"
@@ -34,10 +54,16 @@ export default function AboutSection() {
                     className="object-cover hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 20vw"
                   />
-                </div>
+                </motion.div>
 
                 {/* Bottom Left Image */}
-                <div className="rounded-2xl overflow-hidden shadow-lg relative h-64">
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: false }}
+                  transition={{ duration: 0.6, delay: 0.6 }}
+                  className="rounded-2xl overflow-hidden shadow-lg relative h-64"
+                >
                   <Image 
                     src="/images/doctor-cosulting-patient.jpg" 
                     alt="Ayurvedic doctor consultation"
@@ -45,10 +71,16 @@ export default function AboutSection() {
                     className="object-cover hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 20vw"
                   />
-                </div>
+                </motion.div>
 
                 {/* Bottom Right Image */}
-                <div className="rounded-2xl overflow-hidden shadow-lg relative h-64">
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: false }}
+                  transition={{ duration: 0.6, delay: 0.8 }}
+                  className="rounded-2xl overflow-hidden shadow-lg relative h-64"
+                >
                   <Image 
                     src="/images/hospital-reception.jpg" 
                     alt="Traditional Ayurvedic medicines"
@@ -56,51 +88,81 @@ export default function AboutSection() {
                     className="object-cover hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 20vw"
                   />
-                </div>
+                </motion.div>
               </div>
 
-              {/* Decorative Elements */}
-              <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-br from-emerald-400/20 to-teal-500/20 rounded-full blur-2xl"></div>
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-emerald-400/20 to-teal-500/20 rounded-full blur-2xl"></div>
-            </div>
+            
+            </motion.div>
 
             {/* Right Side - Content */}
             <div className="lg:pl-8">
               {/* Badge */}
-              <div className="inline-flex items-center space-x-2 bg-emerald-50 text-emerald-700 rounded-full px-4 py-2 mb-6 border border-emerald-200">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6 }}
+                className="inline-flex items-center space-x-2 bg-emerald-50 text-emerald-700 rounded-full px-4 py-2 mb-6 border border-emerald-200"
+              >
                 <Plus className="w-4 h-4" />
                 <span className="text-sm font-medium tracking-wide uppercase">
                   About Us
                 </span>
-              </div>
+              </motion.div>
 
               {/* Main Heading */}
-              <h2 
+              <motion.h2 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-3xl md:text-4xl lg:text-5xl text-gray-800 leading-tight mb-6"
                 style={{fontFamily: 'Philosopher, serif'}}
               >
                 Welcome to SKJ Divya Ayurveda Hospital
-              </h2>
+              </motion.h2>
 
               {/* Description */}
-              <p className="text-gray-600 text-lg leading-relaxed mb-6">
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="text-gray-600 text-lg leading-relaxed mb-6 text-justify"
+              >
                 At SKJ Divya Ayurveda Hospital, we are dedicated to providing authentic and effective Ayurvedic treatments. We believe in treating the root cause of illness, not just the symptoms, to bring lasting health and wellness.
-              </p>
+              </motion.p>
               
-              <p className="text-gray-600 text-lg leading-relaxed mb-12">
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="text-gray-600 text-lg leading-relaxed mb-12 text-justify"
+              >
                 Our team of highly qualified and experienced Ayurvedic doctors, led by <span className="font-semibold text-emerald-700">Dr. S.K. Sharma</span>, uses traditional Panchkarma therapies and natural medicines to help our patients. We offer a peaceful and supportive environment where your body can heal itself naturally.
-              </p>
+              </motion.p>
 
               {/* Specializations Heading */}
-              <h3 
+              <motion.h3 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6, delay: 0.8 }}
                 className="text-xl md:text-2xl text-gray-800 mb-4"
                 style={{fontFamily: 'Philosopher, serif'}}
               >
                 We specialize in treating:
-              </h3>
+              </motion.h3>
 
               {/* Features List */}
-              <div className="space-y-6">
+              <motion.div 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.8, delay: 1.0 }}
+                className="space-y-6"
+              >
                 {/* Feature 1 */}
                 <div>
                   <h4 
@@ -148,7 +210,7 @@ export default function AboutSection() {
                     <span>And many more health conditions</span>
                   </h4>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Plus, Eye, Heart, Award, Activity, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function HospitalGallery() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -100,26 +101,42 @@ export default function HospitalGallery() {
           {/* Section Header */}
           <div className="text-center mb-16 relative z-10">
             {/* Floating Badge */}
-            <div className="inline-flex items-center justify-center space-x-2 bg-white shadow-lg border border-emerald-100 text-emerald-700 rounded-full px-6 py-3 mb-6 hover:shadow-xl transition-shadow duration-300">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center justify-center space-x-2 bg-white shadow-lg border border-emerald-100 text-emerald-700 rounded-full px-6 py-3 mb-6 hover:shadow-xl transition-shadow duration-300"
+            >
               <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
               <span className="text-sm font-semibold tracking-wider uppercase">
                 Gallery Showcase
               </span>
               <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-            </div>
+            </motion.div>
 
             {/* Main Heading with Gradient */}
-            <h2 
+            <motion.h2 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="text-4xl md:text-5xl lg:text-6xl bg-gradient-to-r from-emerald-600 via-emerald-700 to-teal-600 bg-clip-text text-transparent leading-tight mb-6"
               style={{fontFamily: 'Philosopher, serif'}}
             >
               Discover Our World
-            </h2>
+            </motion.h2>
 
             {/* Enhanced Description */}
-            <p className="text-gray-600 text-xl leading-relaxed max-w-4xl mx-auto">
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-gray-600 text-xl leading-relaxed max-w-4xl mx-auto"
+            >
               Step into our serene healing sanctuary where ancient Ayurvedic wisdom meets modern comfort
-            </p>
+            </motion.p>
           </div>
 
           {/* New Masonry-Style Gallery Grid */}
@@ -127,8 +144,12 @@ export default function HospitalGallery() {
             {galleryImages.map((image, index) => {
               const IconComponent = image.icon;
               return (
-                <div 
+                <motion.div 
                   key={image.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: false }}
+                  transition={{ duration: 0.6, delay: 0.6 + (index * 0.1) }}
                   className={`${image.className} group relative overflow-hidden rounded-3xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[0.98] cursor-pointer border-2 border-transparent hover:border-emerald-200`}
                   onClick={() => openLightbox(index)}
                 >
@@ -157,11 +178,6 @@ export default function HospitalGallery() {
                   {/* Main Content */}
                   <div className="absolute inset-0 flex flex-col justify-end p-6 z-10">
                     <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                      {/* Icon */}
-                      {/* <div className="w-14 h-14 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-4 group-hover:bg-emerald-500/80 transition-all duration-300">
-                        <IconComponent className="w-7 h-7 text-white" />
-                      </div> */}
-
                       {/* Title */}
                       <h3 className="text-white text-lg font-bold mb-2 group-hover:text-emerald-100 transition-colors duration-300">
                         {image.alt}
@@ -182,13 +198,19 @@ export default function HospitalGallery() {
                     <div className="absolute top-4 right-4 w-2 h-2 bg-emerald-400 rounded-full"></div>
                     <div className="absolute top-6 right-6 w-1 h-1 bg-emerald-300 rounded-full"></div>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>
 
           {/* Enhanced Bottom Section */}
-          <div className="text-center mt-20">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+            className="text-center mt-20"
+          >
             {/* Stats Row */}
             <div className="flex flex-wrap justify-center items-center gap-8 mb-12">
               <div className="text-center">
@@ -215,11 +237,8 @@ export default function HospitalGallery() {
               <div className="w-6 h-6 bg-emerald-400 rounded-full opacity-60"></div>
               <div className="w-4 h-4 bg-emerald-200 rounded-full opacity-40 animate-pulse"></div>
             </div>
-          </div>
+          </motion.div>
         </div>
-
-      
-     
       </section>
 
       {/* Lightbox Modal */}
@@ -283,36 +302,8 @@ export default function HospitalGallery() {
                   {galleryImages[selectedImageIndex].description}
                 </p>
               </div>
-
-              {/* Image Counter */}
-              {/* <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm">
-                {selectedImageIndex + 1} of {galleryImages.length}
-              </div> */}
             </div>
           </div>
-
-          {/* Thumbnail Navigation */}
-          {/* <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2 max-w-md overflow-x-auto">
-            {galleryImages.map((image, index) => (
-              <button
-                key={image.id}
-                onClick={(e) => { e.stopPropagation(); setSelectedImageIndex(index); }}
-                className={`relative w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 flex-shrink-0 ${
-                  index === selectedImageIndex 
-                    ? 'border-emerald-400 ring-2 ring-emerald-400/50' 
-                    : 'border-white/30 hover:border-white/60'
-                }`}
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover"
-                  sizes="64px"
-                />
-              </button>
-            ))}
-          </div> */}
         </div>
       )}
     </>

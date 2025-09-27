@@ -1,5 +1,7 @@
+'use client';
 import Link from 'next/link';
 import { Plus, Smile } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function SuDiviaHeroSection() {
   return (
@@ -26,15 +28,25 @@ export default function SuDiviaHeroSection() {
             {/* Left Content */}
             <div className="text-center lg:text-left pt-14 sm:pt-12 lg:pt-26">
               {/* Badge */}
-              <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md rounded-full px-3 sm:px-4 py-2 mb-4 sm:mb-6 border border-white/20">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md rounded-full px-3 sm:px-4 py-2 mb-4 sm:mb-6 border border-white/20"
+              >
                 <Plus className="w-3 h-3 sm:w-4 sm:h-4 text-emerald-400" />
                 <span className="text-white text-xs sm:text-sm font-medium tracking-wide">
                   SKJ DIVYA AYURVEDA HOSPITAL
                 </span>
-              </div>
+              </motion.div>
 
               {/* Main Heading */}
-              <h1 
+              <motion.h1 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white leading-tight sm:leading-relaxed mb-4 sm:mb-6" 
                 style={{fontFamily: 'Philosopher, serif'}}
               >
@@ -45,17 +57,29 @@ export default function SuDiviaHeroSection() {
                 <span className="block mt-1 sm:mt-0">
                   Here at <span className="text-emerald-400">SKJ Divya Ayurveda Hospital</span> 
                 </span>
-              </h1>
+              </motion.h1>
 
               {/* Description */}
-              <p className="text-white/80 text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0">
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="text-white/80 text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0"
+              >
                 Experience the transformative power of <span className="text-emerald-400 font-medium">authentic Ayurveda</span>—treating the root cause of illness for lasting health, wellness, and rejuvenation.
-              </p>
+              </motion.p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12 justify-center lg:justify-start px-4 sm:px-0">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12 justify-center lg:justify-start px-4 sm:px-0"
+              >
                 <Link 
-                  href="/contact" 
+                  href="/contact-at-skj-divya-ayurveda-hospital-ajmer" 
                   className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-emerald-500/25 text-center"
                 >
                   Book a Consultation
@@ -66,10 +90,16 @@ export default function SuDiviaHeroSection() {
                 >
                   Learn About Our Therapies
                 </Link>
-              </div>
+              </motion.div>
 
               {/* Specializations */}
-              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 max-w-2xl mx-auto lg:mx-0 mb-8 sm:mb-12 px-2 sm:px-0">
+              <motion.div 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 max-w-2xl mx-auto lg:mx-0 mb-8 sm:mb-12 px-2 sm:px-0"
+              >
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 text-center">
                   <div className="text-emerald-400 font-bold text-xs sm:text-sm">Joint Pain</div>
                 </div>
@@ -82,10 +112,16 @@ export default function SuDiviaHeroSection() {
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 text-center">
                   <div className="text-emerald-400 font-bold text-xs sm:text-sm">Detoxification</div>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Social Proof */}
-              <div className="flex flex-col sm:flex-row items-center lg:items-start space-y-4 sm:space-y-0 sm:space-x-6 justify-center lg:justify-start">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 1.0 }}
+                className="flex flex-col sm:flex-row items-center lg:items-start space-y-4 sm:space-y-0 sm:space-x-6 justify-center lg:justify-start"
+              >
                 {/* Customer Avatars */}
                 <div className="flex items-center">
                   <div className="flex -space-x-2 sm:-space-x-3">
@@ -112,7 +148,7 @@ export default function SuDiviaHeroSection() {
                     <span className="sm:hidden"> </span>healthcare experience
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

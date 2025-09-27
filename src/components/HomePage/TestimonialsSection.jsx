@@ -1,5 +1,7 @@
+'use client';
 import Link from 'next/link';
 import { Plus, Quote } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function TestimonialsSection() {
   const testimonials = [
@@ -45,38 +47,58 @@ export default function TestimonialsSection() {
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-16">
             <div className="mb-8 lg:mb-0">
               {/* Badge */}
-              <div className="inline-flex items-center space-x-2 bg-emerald-100 text-emerald-700 rounded-full px-4 py-2 mb-6 border border-emerald-200">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6 }}
+                className="inline-flex items-center space-x-2 bg-emerald-100 text-emerald-700 rounded-full px-4 py-2 mb-6 border border-emerald-200"
+              >
                 <Plus className="w-4 h-4" />
                 <span className="text-sm font-medium tracking-wide uppercase">
                   Patient Stories
                 </span>
-              </div>
+              </motion.div>
 
               {/* Main Heading */}
-              <h2 
+              <motion.h2 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-3xl md:text-4xl lg:text-5xl text-gray-800 leading-tight max-w-3xl"
                 style={{fontFamily: 'Philosopher, serif'}}
               >
                 Healing Experiences at SKJ Ayurveda Hospital
-              </h2>
+              </motion.h2>
             </div>
 
             {/* CTA Button */}
-            <div className="flex-shrink-0">
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="flex-shrink-0"
+            >
               <Link 
                 href="/testimonials" 
                 className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-emerald-500/25"
               >
                 More Stories
               </Link>
-            </div>
+            </motion.div>
           </div>
 
           {/* Testimonials Grid */}
           <div className="grid md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial) => (
-              <div 
+            {testimonials.map((testimonial, index) => (
+              <motion.div 
                 key={testimonial.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6, delay: 0.6 + (index * 0.1) }}
                 className="group bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-emerald-100 hover:bg-white hover:shadow-xl hover:shadow-emerald-200/30 transition-all duration-500 hover:-translate-y-1 relative overflow-hidden"
               >
                 {/* Quote Icon */}
@@ -123,12 +145,18 @@ export default function TestimonialsSection() {
 
                 {/* Decorative Gradient */}
                 <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 via-teal-500 to-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-12 border-t border-emerald-100">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8, delay: 1.0 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-12 border-t border-emerald-100"
+          >
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-emerald-700 mb-2">25+</div>
               <div className="text-gray-600">Years of Experience</div>
@@ -145,13 +173,10 @@ export default function TestimonialsSection() {
               <div className="text-3xl md:text-4xl font-bold text-emerald-700 mb-2">15+</div>
               <div className="text-gray-600">Therapies Offered</div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        {/* Background Decorative Elements
-        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-emerald-400/10 to-teal-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-br from-amber-400/10 to-orange-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-emerald-400/5 to-teal-500/5 rounded-full blur-3xl"></div> */}
+       
       </section>
     </>
   );
